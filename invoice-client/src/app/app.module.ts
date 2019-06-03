@@ -12,6 +12,7 @@ import { LoyaltyComponent } from './loyalty/loyalty.component';
 import { EndDescriptionComponent } from './end-description/end-description.component';
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     LoyaltyComponent,
     EndDescriptionComponent,
     HomeComponent,
-    SideBarComponent
+    SideBarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

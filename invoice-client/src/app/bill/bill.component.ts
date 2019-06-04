@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-bill',
   templateUrl: './bill.component.html',
@@ -10,6 +11,10 @@ export class BillComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    
   }
 
 }

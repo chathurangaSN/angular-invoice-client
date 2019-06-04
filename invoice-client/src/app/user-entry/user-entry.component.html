@@ -1,16 +1,19 @@
-<form style="padding: 15px">
+<form class="form-group" [FormGroup]="entry">
+    
   <div class="row">
     <div class="col">
-      <select id="inputState" class="form-control">
-        <option selected>0SA0001</option>
-        <option>...</option>
+      <select  id="item" class="form-control" type="text" formControlName="item">
+        <option *ngFor="let item of itemList" [value]="item">{{item.id}}</option>
+        <!-- <option>...</option> -->
       </select>
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Qty">
+      <input id="qty"type="text" class="form-control" formControlName="qty" placeholder="Qty">
     </div>
     <div class="col">
-        <button type="submit" class="btn btn-primary btn-lg btn-block">Enter</button>
+        <button type="submit" class="btn btn-dark btn-lg btn-block">Enter</button>
     </div>
   </div>
 </form>
+
+<pre>{{entry.value| json}}</pre>

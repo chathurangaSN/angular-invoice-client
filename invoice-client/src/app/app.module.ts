@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { EndDescriptionComponent } from './end-description/end-description.compo
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +32,12 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule 
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

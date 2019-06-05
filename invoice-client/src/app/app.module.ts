@@ -15,6 +15,9 @@ import { EndDescriptionComponent } from './end-description/end-description.compo
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { HeaderComponent } from './header/header.component';
+import { ReactiveComponent } from './reactive/reactive.component';
+
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     EndDescriptionComponent,
     HomeComponent,
     SideBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReactiveComponent
   ],
   imports: [
     ReactiveFormsModule,

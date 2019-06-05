@@ -1,17 +1,34 @@
-<form class="form-group" [FormGroup]="entry">
-    
-  <div class="row">
-    <div class="col">
-      <select  id="item" class="form-control" type="text" formControlName="item">
-        <option *ngFor="let item of itemList" [value]="item">{{item.id}}</option>
-        <!-- <option>...</option> -->
+<form id="entry-form" class="form-group" [formGroup]="entry" (ngSubmit)="submit(entry.value)" >
+  
+  <div formControlName="item" class="row">
+    <!-- item -->
+    <div class="col-4">
+      <select
+        class="form-control" 
+        type="text"
+        placeholder="item code" 
+        formControlName="id">
+        <option *ngFor="let item of itemList" >{{item.id}}</option>
+        <!-- this.itemList -->
       </select>
     </div>
-    <div class="col">
-      <input id="qty"type="text" class="form-control" formControlName="qty" placeholder="Qty">
+      <!-- <div *ngIf="user.get('item').get('id').hasError('required') && user.get('item').get('item').touched" class="error">
+          *required
+      </div> -->
+   
+    <!-- qty -->
+    <div class="col-4">
+      <input
+        class="form-control" 
+        type="text"
+        placeholder="Qty" 
+        formControlName="qty">
     </div>
-    <div class="col">
-        <button type="submit" class="btn btn-dark btn-lg btn-block">Enter</button>
+
+    <div class="col-4">
+        <button 
+          class="btn btn-dark btn-block" 
+          type="submit">Enter</button>
     </div>
   </div>
 </form>
